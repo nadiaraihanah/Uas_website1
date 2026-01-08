@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zest Sports - How to Use Our Platform</title> 
+    <link rel="stylesheet" href="about T.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+    
+    <div class="top-nav-link">
+        <div class="container">
+            <a href="index.html" class="home-link">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+        </div>
+    </div>
+    
+    <audio id="backgroundAudio" loop autoplay muted>
+        <source src="25f01081538fc.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="audio-control">
+        <button id="muteToggle" onclick="toggleMute()">
+            <i class="fas fa-volume-mute"></i> 
+        </button>
+    </div>
+
+    <section class="about-us-section">
+        <div class="container">
+            
+            <div class="about-content">
+                <h2 class="section-title">HOW TO USE</h2>
+                <h3 class="tagline">Complete Guide to Zest Sports Platform</h3>
+                
+                <p>Zest Sports is your ultimate sports gear destination. Follow these simple steps to shop, checkout, and manage your sports equipment purchases with ease.</p>
+                
+                <!-- Steps Guide -->
+                <div class="steps-guide-container">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-info">
+                            <h4><i class="fas fa-user-check"></i> Create Account / Login</h4>
+                            <p>Sign up for a new account or login to access exclusive member benefits and faster checkout.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-info">
+                            <h4><i class="fas fa-shopping-cart"></i> Browse & Add to Cart</h4>
+                            <p>Explore our premium sports gear collection. Click "Add to Cart" on items you want to purchase.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-info">
+                            <h4><i class="fas fa-credit-card"></i> Secure Checkout</h4>
+                            <p>Go to your cart, review items, and proceed to checkout. Enter shipping details and payment information.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-info">
+                            <h4><i class="fas fa-box"></i> Track Your Order</h4>
+                            <p>After checkout, track your order status and receive updates on delivery right from your account.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="key-points">
+                    <div class="point">
+                        <h4><i class="fas fa-shipping-fast"></i> Fast Delivery</h4>
+                        <p>• Same-day shipping available<br>
+                           • Free shipping for orders over $50<br>
+                           • Worldwide delivery options</p>
+                    </div>
+                    <div class="point">
+                        <h4><i class="fas fa-shield-alt"></i> Secure Shopping</h4>
+                        <p>• SSL encrypted payments<br>
+                           • 30-day return policy<br>
+                           • Authentic products guaranteed</p>
+                    </div>
+                </div>
+                <a href="pd.html" class="cta-button">Start Shopping Now</a>
+            </div>
+
+            <div class="about-image">
+                <div class="video-container">
+                    <video autoplay loop playsinline controls>
+                        <source src="At long last, the Adidas Adizero Adios Pro 4 in Cloud White-Core Black is here. ☁️🙏A quick reca.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-overlay">
+                        <h2>ZEST SPORTS</h2>
+                        <p class="video-subtitle">Premium Sports Gear Destination</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        var audio = document.getElementById('backgroundAudio');
+        var muteToggle = document.getElementById('muteToggle');
+        
+        // Try to play audio (browsers block autoplay with sound)
+        document.addEventListener('DOMContentLoaded', () => {
+            audio.play().catch(e => {
+                console.log("Autoplay blocked. User needs to click to play music.");
+            });
+        });
+
+        // Function to toggle background music
+        function toggleMute() {
+            if (audio.muted) {
+                audio.muted = false;
+                muteToggle.innerHTML = '<i class="fas fa-volume-up"></i>';
+                audio.play().catch(e => console.log("Failed to play audio after unmute."));
+            } else {
+                audio.muted = true;
+                muteToggle.innerHTML = '<i class="fas fa-volume-mute"></i>';
+            }
+        }
+    </script>
+</body>
+</html>

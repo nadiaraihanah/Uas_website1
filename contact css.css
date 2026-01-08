@@ -1,0 +1,285 @@
+/* Custom Colors (Menggunakan skema warna RedStore) */
+:root {
+    --primary-red: #ff523b; 
+    --accent-dark: #2c3e50; /* Abu-abu gelap/Navy untuk kesan elegan */
+    --text-color-soft: #7f8c8d; /* Abu-abu lembut */
+    --bg-light: #f9f9f9; /* Background lembut */
+    --white: #ffffff;
+    --shadow-premium: 0 10px 30px rgba(0, 0, 0, 0.08); /* Bayangan yang dalam tapi halus */
+}
+
+/* Import Font Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Pengaturan Dasar */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--accent-dark);
+    background-color: var(--bg-light);
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color-soft);
+}
+
+.container {
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px; /* Jarak antar kolom lebih besar */
+    margin-top: 50px;
+}
+
+/* Tombol CTA (Consistent with RedStore .btn) */
+.btn {
+    display: inline-block;
+    background: var(--primary-red);
+    color: var(--white);
+    padding: 12px 40px;
+    border-radius: 50px; /* Lebih bulat dan modern */
+    transition: background 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.btn:hover {
+    background: #e64a2f; 
+    transform: translateY(-2px); /* Efek mengangkat */
+}
+
+/* =========================== */
+/* NAVIGASI TAMBAHAN (Kembali ke Home) */
+/* =========================== */
+.top-nav-link {
+    padding: 25px 0;
+    background-color: var(--white);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05); /* Shadow halus */
+}
+
+.home-link {
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    color: var(--text-color-soft);
+    padding: 8px 15px;
+    border-radius: 30px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.home-link i {
+    margin-right: 10px;
+    font-size: 1.1em;
+}
+
+.home-link:hover {
+    background: #f0f0f0;
+    color: var(--primary-red);
+}
+
+/* =========================== */
+/* CONTACT SECTION */
+/* =========================== */
+.contact-section {
+    padding: 50px 0 100px;
+    background: radial-gradient(#fff, #fddddd); /* Background RedStore yang lebih cerah */
+}
+
+.section-header {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.section-header h2 {
+    font-size: 3em;
+    font-weight: 700;
+    color: var(--accent-dark);
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--text-color-soft);
+    font-size: 1.1em;
+}
+
+
+/* =========================== */
+/* CONTACT INFO (Kolom Kiri) */
+/* =========================== */
+.contact-info {
+    flex-basis: 35%;
+    padding: 40px;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: var(--shadow-premium);
+    align-self: stretch; 
+    position: relative;
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 35px;
+    padding-bottom: 5px;
+}
+
+.contact-info-icon {
+    width: 55px;
+    height: 55px;
+    background: var(--primary-red); 
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4em;
+    margin-right: 25px;
+    flex-shrink: 0;
+}
+
+.contact-info-content h4 {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--accent-dark);
+    margin-bottom: 3px;
+}
+
+.contact-info-content p {
+    font-size: 1em;
+    color: var(--text-color-soft);
+    margin: 0;
+}
+
+
+/* =========================== */
+/* CONTACT FORM (Kolom Kanan) */
+/* =========================== */
+.contact-form-wrapper {
+    flex-basis: 60%;
+    padding: 40px;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: var(--shadow-premium);
+}
+
+.contact-form-wrapper h3 {
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--primary-red);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 45px; /* Jarak antar input lebih lebar */
+}
+
+.input-box input,
+.input-box textarea {
+    width: 100%;
+    padding: 12px 10px; /* Padding lebih besar */
+    border: 1px solid #ddd; 
+    border-radius: 8px; /* Sudut membulat */
+    outline: none;
+    background: #fcfcfc;
+    font-size: 1em;
+    color: var(--accent-dark);
+    transition: all 0.3s ease;
+}
+
+/* Fokus input/textarea */
+.input-box input:focus,
+.input-box textarea:focus,
+.input-box input:valid,
+.input-box textarea:valid {
+    border-color: var(--primary-red);
+    box-shadow: 0 0 5px rgba(255, 82, 59, 0.3); /* Shadow halus saat fokus */
+    background: var(--white);
+}
+
+.input-box label {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    font-size: 1em;
+    color: var(--text-color-soft);
+    pointer-events: none;
+    transition: 0.3s ease;
+    background-color: var(--white);
+    padding: 0 5px;
+}
+
+/* Label animasi (float up & kecil) */
+.input-box input:focus ~ label,
+.input-box textarea:focus ~ label,
+.input-box input:valid ~ label,
+.input-box textarea:valid ~ label {
+    top: -10px;
+    left: 8px;
+    font-size: 0.8em;
+    color: var(--primary-red);
+    font-weight: 500;
+}
+
+.input-box textarea {
+    resize: vertical;
+    min-height: 150px; /* Area pesan lebih besar */
+}
+
+/* Tombol Kirim */
+.input-box .btn {
+    width: 100%;
+    font-size: 1.1em;
+    padding: 15px 0;
+    margin-top: 10px;
+}
+
+/* =========================== */
+/* Responsif */
+/* =========================== */
+@media (max-width: 992px) {
+    .row {
+        flex-direction: column;
+        margin-top: 30px;
+    }
+
+    .contact-info,
+    .contact-form-wrapper {
+        flex-basis: 100%;
+        width: 100%;
+    }
+    
+    .contact-info {
+        order: 1; 
+        padding: 30px;
+    }
+
+    .contact-form-wrapper {
+        order: 0; 
+        padding: 30px;
+    }
+    
+    .section-header h2 {
+        font-size: 2.5em;
+    }
+}
